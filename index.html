@@ -13,13 +13,35 @@
 </head>
 <body>
     <div class="container">
+        <div class="burger-menu">
+            <div class="burger-menu_content">
+                <img src="./images/cancel_btn.png" 
+                alt=""
+                class="burger-menu_btn_close">
+                <input type="text" class="burger-menu_input">
+                <ul class="burger-menu_list">
+                    <li class="burger-menu_item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="burger-menu_item">2
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="burger-menu_item">
+                        <a href="#">Our ProjectT</a>
+                    <li class="burger-menu_item">
+                        <a href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
        <div class="navbar">
             <img src="./images/logo.png" alt="logo">
             <ul class="navbar__list">
                 <li class="list__item">
                     <a href="#">Home</a>
                 </li>
-                <li class="list__item">
+                <li class="list__item">2
                     <a href="#">Services</a>
                 </li>
                 <li class="list__item">
@@ -30,6 +52,11 @@
                 </li>
             </ul>
             <input type="text" class="navbar__input">
+            <img 
+              src="./images/navbar_btn.png" 
+              alt=""
+              class="navbar_btn_burger"
+              />
         </div>
 
         <header>
@@ -130,5 +157,19 @@
             <p class="footer_info">© 2022 Enver, All Rights Reserved</p>
         </footer>
     </div>
+
+    <script>
+        let openBtn = document.querySelector('.navbar__btn_burger');
+        let closeBtn = document.querySelector('.burger-menu__btn_close');
+        let burgerMenu = document.querySelector('.burger-menu');
+  
+        openBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'block';
+        });
+  
+        closeBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'none';
+        });
+      </script>
 </body>
 </html>
